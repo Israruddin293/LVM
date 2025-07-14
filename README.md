@@ -66,9 +66,7 @@ sudo fdisk -l /dev/sdb
 Make sure the disk has no existing partitions.
 
      Step 2: Create Partitions for LVM
-bash
-Copy
-Edit
+
 sudo fdisk /dev/sdb
 Within fdisk:
 
@@ -91,35 +89,25 @@ w → Write and save
 Repeat if you want multiple LVM partitions (e.g., /dev/sdb1, /dev/sdb2).
 
      Step 3: Create Physical Volumes (PVs)
-bash
-Copy
-Edit
+
 sudo pvcreate /dev/sdb1 /dev/sdb2
 pvs
 pvdisplay
      Step 4: Create a Volume Group (VG)
-bash
-Copy
-Edit
+
 sudo vgcreate LINUXVG /dev/sdb1 /dev/sdb2
 vgdisplay
      Step 5: Create a Logical Volume (LV)
-bash
-Copy
-Edit
+
 sudo lvcreate -L 8G -n LinuxLV LINUXVG
 lvs
 lvdisplay
      Step 6: Format the Logical Volume
-bash
-Copy
-Edit
+
 sudo mkfs.ext4 /dev/LINUXVG/LinuxLV
 lsblk -f
      Step 7: Mount the Logical Volume
-bash
-Copy
-Edit
+
 sudo mkdir /mnt/testing
 sudo mount /dev/LINUXVG/LinuxLV /mnt/testing
 To mount permanently, add to /etc/fstab.
