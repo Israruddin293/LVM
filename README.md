@@ -1,9 +1,11 @@
-Here’s a professionally formatted **README.md** file based on the guide you provided. This can be used as documentation or a tutorial in any Linux server project or educational setting.
+
+
+
+LVM (Logical Volume Manager) on Linux
 
 ---
 
 ````markdown
-LVM (Logical Volume Manager) on Linux
 
 ## Overview
 
@@ -11,9 +13,9 @@ LVM (Logical Volume Manager) is a powerful disk management tool in Linux that al
 
 ---
 
-## 🔧 Why Use LVM Instead of Standard Partitions?
+## Why Use LVM Instead of Standard Partitions?
 
-### ❌ Challenges with Standard Partitions
+### Challenges with Standard Partitions
 
 #### Scenario 1: Disk Fully Allocated
 - **Disk**: `/dev/sda`
