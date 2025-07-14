@@ -3,7 +3,7 @@ Here’s a professionally formatted **README.md** file based on the guide you pr
 ---
 
 ````markdown
-# LVM (Logical Volume Manager) on Linux
+LVM (Logical Volume Manager) on Linux
 
 ## Overview
 
