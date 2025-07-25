@@ -127,13 +127,16 @@ sudo mount /dev/LINUXVG/LinuxLV /mnt/testing
 To mount permanently, add to /etc/fstab.
 ```
 
-     Summary
-Feature	Traditional Partitioning	LVM
-Resize on the fly	❌ No	✅ Yes
-Combine multiple disks	❌ No	✅ Yes
-Snapshot support	❌ No	✅ Yes
-Downtime for changes	✅ Often required	❌ Minimal or none
-Space flexibility	❌ Static	✅ Dynamic
+## 📊 Traditional Partitioning vs LVM
+
+| 🔧 Feature               | 🧱 Traditional Partitioning | 📦 LVM                    |
+|--------------------------|-----------------------------|---------------------------|
+| Resize on the fly        | ❌ No                        | ✅ Yes                    |
+| Combine multiple disks   | ❌ No                        | ✅ Yes                    |
+| Snapshot support         | ❌ No                        | ✅ Yes                    |
+| Downtime for changes     | ✅ Often required            | ❌ Minimal or none        |
+| Space flexibility        | ❌ Static                    | ✅ Dynamic                |
+
 
 ✍️ Author
 Israr ud din
