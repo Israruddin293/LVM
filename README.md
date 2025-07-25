@@ -63,11 +63,12 @@ LVM introduces a layer of abstraction between physical disks and file systems.
 ```bash
 lsblk
 sudo fdisk -l /dev/sdb
+```
 Make sure the disk has no existing partitions.
 
 
 ###  Step 2: Create Partitions for LVM
-
+```bash
 sudo fdisk /dev/sdb
 Within fdisk:
 
@@ -88,7 +89,7 @@ Select 8e for Linux LVM
 w → Write and save
 
 Repeat if you want multiple LVM partitions (e.g., /dev/sdb1, /dev/sdb2).
-'''
+```
 ###  Step 3: Create Physical Volumes (PVs)
 
 sudo pvcreate /dev/sdb1 /dev/sdb2
